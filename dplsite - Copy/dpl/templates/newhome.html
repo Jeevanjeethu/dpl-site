@@ -1,0 +1,561 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+body {font-family: "Open Sans"}
+</style>
+<body class="w3-light-grey">
+
+<!-- Navigation bar with social media icons -->
+
+<!-- w3-content defines a container for fixed size centered content,
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1600px">
+
+  <!-- Header -->
+  <header class="w3-container w3-center w3-padding-48 w3-white">
+    <h1 class="w3-xxxlarge"><b>DPL</b></h1>
+    <h6>Welcome to <span class="w3-tag">DOLORES PREMIERE LEAGUE</span></h6>
+  </header>
+
+  <!-- Image header -->
+  <header class="w3-display-container w3-wide" id="home">
+    <img class="w3-image" src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="Fashion Blog" width="1600" height="1060">
+    <div class="w3-display-left w3-padding-large">
+      <h1 class="w3-text-white">DPL</h1>
+      <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>DOLORES PREMIERE LEAGUE</b></h1>
+      <h6><button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off" onclick="document.getElementById('subscribe').style.display='block'">SUBSCRIBE</button></h6>
+    </div>
+  </header>
+
+  <!-- Grid -->
+  <div class="w3-row w3-padding w3-border">
+
+    <!-- Blog entries -->
+    <div class="w3-col l8 s12">
+
+      <!-- Blog entry -->
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+        <div class="w3-center">
+
+
+          <h3>TITLE HEADING</h3>
+          <h5> <span class="w3-opacity"></span></h5>
+        </div>
+
+        <div class="w3-justify">
+          <img src="https://www.desktop-background.com/p/2015/03/03/911402_29-download-cricket-stadium-hd-wallpapersearch-more-sports-amp_1920x1439_h.jpg" alt="Girl Hat" style="width:100%" class="w3-padding-16">
+
+          <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+          <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo1')" id="myBtn"><b>Replies  </b> <span class="w3-tag w3-white">1</span></button></p>
+          <p class="w3-clear"></p>
+          <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
+            <hr>
+              <!-- <div class="w3-col l2 m3">
+                <img src="/w3images/avatar_smoke.jpg" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>George <span class="w3-opacity w3-medium">May 3, 2015, 6:32 PM</span></h4>
+                <p>Great blog post! Following</p>
+              </div> -->
+          </div>
+        </div>
+      </div>
+      <hr>
+
+      <!-- Blog entry -->
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+        <div class="w3-quarter">
+
+
+
+
+
+
+
+          <!-- Example of comment field -->
+          <div id="demo2" style="display:none">
+            <div class="w3-row">
+              <hr>
+              <div class="w3-col l2 m3">
+                <img src="/w3images/girl_train.jpg" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Amber <span class="w3-opacity w3-medium">April 26, 2015, 10:52 PM</span></h4>
+                <p>Love your blog page! Simply the best! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
+              </div>
+            </div>
+            <div class="w3-row w3-margin-bottom">
+              <div class="w3-col l2 m3">
+                <img src="/w3images/girl.jpg" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Angie <span class="w3-opacity w3-medium">April 23, 2015, 9:12 PM</span></h4>
+                <p>Love hats!!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog entry -->
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+        <div class="w3-center">
+          <!DOCTYPE html>
+      <html>
+      <head>
+      <style>
+      * {
+      box-sizing: border-box;
+      }
+
+      .column {
+      float: left;
+      width: 33.33%;
+      padding: 5px;
+      }
+
+      /* Clearfix (clear floats) */
+      .row::after {
+      content: "";
+      clear: both;
+      display: table;
+      }
+
+      /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 500px) {
+      .column {
+      width: 100%;
+      }
+      }
+      </style>
+      </head>
+      <body>
+
+      <h2>Performers</h2>
+
+
+      <div class="row">
+      <div class="column">
+        <img id="orangeCap" src="https://im.indiatimes.in/content/2018/Apr/virat_kohli_has_played_in_all_editions_for_rcb_1523091002_725x725.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+        <h3 id="one">Orange</h3>
+        <p id="two">Team</p>
+      </div>
+      <div class="column">
+        <img id="purpleCap" src="https://statics.sportskeeda.com/editor/2019/02/0bfd0-15512411575203-800.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+        <h3>Purple Cap</h3>
+        <p>Team Id</p>
+      </div>
+      <div class="column">
+        <img id="manOfTheMatch" src="http://www.ipl-fixtures.com/wp-content/uploads/2017/12/Orange-cap-holder-2018.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+        <h3>Man of the Match</h3>
+        <p>Team Id</p>
+
+      </div>
+      </div>
+
+      </body>
+      </html>
+
+
+          <h5> <span class="w3-opacity"></span></h5>
+        </div>
+
+        <div class="w3-justify">
+
+
+          <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+          <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo3')"><b>Replies  </b> <span class="w3-tag w3-white">3</span></button></p>
+          <p class="w3-clear"></p>
+
+          <!-- Example of comment field -->
+          <div id="demo3" style="display:none">
+            <hr>
+            <div class="w3-row w3-margin-bottom">
+              <div class="w3-col l2 m3">
+                <img src="/w3images/girl_mountain.jpg" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Jane <span class="w3-opacity w3-medium">April 10, 2015, 7:22 PM</span></h4>
+                <p>That was a great runway show! Thanks for everything.</p>
+              </div>
+            </div>
+            <div class="w3-row w3-margin-bottom">
+              <div class="w3-col l2 m3">
+                <img src="/w3images/boy.jpg" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>John <span class="w3-opacity w3-medium">April 8, 2015, 10:32 PM</span></h4>
+                <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+              </div>
+            </div>
+            <div class="w3-row w3-margin-bottom">
+              <div class="w3-col l2 m3">
+                <img src="/w3images/girl_hood.jpg" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Anja <span class="w3-opacity w3-medium">April 7, 2015, 9:12 PM</span></h4>
+                <p>Cant wait for the runway to start!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- END BLOG ENTRIES -->
+    </div>
+
+    <!-- About/Information menu -->
+    <div class="w3-col l4">
+      <!-- About Card -->
+      <div class="w3-white w3-margin">
+        <img src="https://statics.sportskeeda.com/wp-content/uploads/2017/03/trophh-1488556918-800.jpg" alt="Jane" style="width:100%" class="w3-grayscale">
+        <div class="w3-container w3-black">
+          <h4>Dolores Premiere League</h4>
+          <p> Play hard to lift it.</p>
+        </div>
+      </div>
+      <hr>
+
+      <!-- Posts -->
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Top Teams</h4>
+        </div>
+        <ul class="w3-ul w3-hoverable w3-white">
+          <li class="w3-padding-16">
+            <img src="https://drive.google.com/uc?id=1yz0ET-GEwojH1p9Ed-qdQ3bevHxwtnfd" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Prodigies</span>
+            <br>
+            <span>SPA -201 </span>
+
+          </li>
+          <li class="w3-padding-16">
+            <img src="https://drive.google.com/uc?id=1-AQ0OK-Bg0gGzLKIl4G0IMx-cmzVhevp" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Colts</span>
+            <br>
+            <span>SPA-02-041 </span>
+          </li>
+          <li class="w3-padding-16">
+            <img src="https://drive.google.com/uc?id=1TmbWQhg-Qzn3KYQm45LYNOwcntU3a11g" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Team Vikings</span>
+            <br>
+            <span>SPA-07-130 </span>
+          </li>
+          <li class="w3-padding-16">
+            <img src="https://drive.google.com/uc?id=1MGEftFdmHNf0huB3JaOuFR_23cmJAvnm" alt="Image" class="w3-left w3-margin-right w3-sepia" style="width:50px">
+            <span class="w3-large">Zeal</span>
+            <br>
+            <span>SPA-111 </span>
+          </li>
+        </ul>
+      </div>
+      <hr>
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Schedules - Day 1</h4>
+        </div>
+      <table class="table" id="pointTable">
+        <thead>
+        <thead class="thead-dark">
+          <tr>
+
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+
+
+      </table>
+
+      </body>
+      </html>
+
+
+      <table class="table table-striped" id="pointTable">
+      <thead>
+
+      </thead>
+      <tbody>
+        <tr>
+
+        </tr>
+      </tbody>
+      </table>
+
+        <!--Add buttons to initiate auth sequence and sign out-->
+        <button id="authorize_button" style="display: none;">Authorize</button>
+        <button id="signout_button" style="display: none; border: 0"></button>
+
+        <!-- <pre id="content" style="white-space: pre-wrap;"></pre> -->
+
+        <script type="text/javascript">
+          // Client ID and API key from the Developer Console
+          var CLIENT_ID = '857508707063-9g35sg8t4en2uahbq8rjb8bai1a6aos1.apps.googleusercontent.com';
+          var API_KEY = 'AIzaSyC9Lit8ChI-OtK2txYiTStI9QOKPEzN7ik';
+
+          // Array of API discovery doc URLs for APIs used by the quickstart
+          var DISCOVERY_DOCS = ["https://sheets.googleapis.com/$discovery/rest?version=v4"];
+
+          // Authorization scopes required by the API; multiple scopes can be
+          // included, separated by spaces.
+          var SCOPES = "https://www.googleapis.com/auth/spreadsheets.readonly";
+
+          var authorizeButton = document.getElementById('authorize_button');
+          var signoutButton = document.getElementById('signout_button');
+
+          /**
+           *  On load, called to load the auth2 library and API client library.
+           */
+          function handleClientLoad() {
+            gapi.load('client:auth2', initClient);
+          }
+
+          /**
+           *  Initializes the API client library and sets up sign-in state
+           *  listeners.
+           */
+          function initClient() {
+            gapi.client.init({
+              apiKey: API_KEY,
+              clientId: CLIENT_ID,
+              discoveryDocs: DISCOVERY_DOCS,
+              scope: SCOPES
+            }).then(function () {
+              // Listen for sign-in state changes.
+              gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
+
+              // Handle the initial sign-in state.
+              updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+              authorizeButton.onclick = handleAuthClick;
+              signoutButton.onclick = handleSignoutClick;
+            }, function(error) {
+              appendPre(JSON.stringify(error, null, 2));
+            });
+          }
+
+          /**
+           *  Called when the signed in status changes, to update the UI
+           *  appropriately. After a sign-in, the API is called.
+           */
+          function updateSigninStatus(isSignedIn) {
+            if (isSignedIn) {
+              authorizeButton.style.display = 'none';
+              signoutButton.style.display = 'block';
+              listMajors();
+            } else {
+              authorizeButton.style.display = 'block';
+              signoutButton.style.display = 'none';
+            }
+          }
+
+          /**
+           *  Sign in the user upon button click.
+           */
+          function handleAuthClick(event) {
+            gapi.auth2.getAuthInstance().signIn();
+          }
+
+          /**
+           *  Sign out the user upon button click.
+           */
+          function handleSignoutClick(event) {
+            gapi.auth2.getAuthInstance().signOut();
+          }
+
+          /**
+           * Append a pre element to the body containing the given message
+           * as its text node. Used to display the results of the API call.
+           *
+           * @param {string} message Text to be placed in pre element.
+           */
+          function appendPre(message) {
+            var pre = document.getElementById('content');
+            var textContent = document.createTextNode(message + '\n');
+            pre.appendChild(textContent);
+          }
+
+          /**
+           * Print the names and majors of students in a sample spreadsheet:
+           * https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
+           */
+
+          function listMajors() {
+            gapi.client.sheets.spreadsheets.values.get({
+              spreadsheetId: '1CBj-1n3qPaTuzX9x637W-7wQkO8iY5LqnDXFzszfmCc',
+              range: 'Scedules!A:D',
+            }).then(function(response) {
+              var range = response.result;
+              if (range.values.length > 0) {
+                // appendPre('POINTS TABLE');
+                console.log(range.values);
+                // $('#two:contains("Team")').text(range.values[1][3]);
+                for (i = 0; i < range.values.length; i++) {
+                  var row = range.values[i];
+                  $("#pointTable tbody").append("<tr><td>"+row[0]+"</td><td>"+row[1]+"<t/d><td>"+row[2]+"</td></tr>");
+                  // Print columns A and E, which correspond to indices 0 and 4.
+                  // appendPre(row[0] +'  V/S  '+ row[1]+'       ' + row[2]);
+                  // $("#orangeCap").attr("src", row[0]);
+                  // $("#purpleCap").attr("src", row[0]);
+                }
+              } else {
+                appendPre('No data found.');
+              }
+            }, function(response) {
+              appendPre('Error: ' + response.result.error.message);
+            });
+          }
+
+        </script>
+
+        <script async defer src="https://apis.google.com/js/api.js"
+          onload="this.onload=function(){};handleClientLoad()"
+          onreadystatechange="if (this.readyState === 'complete') this.onload()">
+        </script>
+
+
+      </body>
+      </html>
+
+
+
+    <!-- END About/Intro Menu -->
+    </div>
+
+  <!-- END GRID -->
+  </div>
+
+<!-- END w3-content -->
+</div>
+
+<!-- Subscribe Modal -->
+<div id="subscribe" class="w3-modal w3-animate-opacity">
+  <div class="w3-modal-content" style="padding:32px">
+    <div class="w3-container w3-white">
+      <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
+      <h2 class="w3-wide">SUBSCRIBE</h2>
+      <p>Join my mailing list to receive updates on the latest blog posts and other things.</p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+      <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Subscribe</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+          <!-- Example of comment field -->
+          <div id="demo2" style="display:none">
+            <div class="w3-row">
+              <hr>
+              <div class="w3-col l2 m3">
+                <img src="/w3images/girl_train.jpg" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Amber <span class="w3-opacity w3-medium">April 26, 2015, 10:52 PM</span></h4>
+                <p>Love your blog page! Simply the best! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
+              </div>
+            </div>
+            <div class="w3-row w3-margin-bottom">
+              <div class="w3-col l2 m3">
+                <img src="/w3images/girl.jpg" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Angie <span class="w3-opacity w3-medium">April 23, 2015, 9:12 PM</span></h4>
+                <p>Love hats!!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog entry -->
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+        <div class="w3-center">
+          <h3></h3>
+          <h5> <span class="w3-opacity"></span></h5>
+        </div>
+
+        <div class="w3-justify">
+          <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="Runway" style="width:100%" class="w3-padding-16">
+
+          <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+          <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo3')"><b>Replies  </b> <span class="w3-tag w3-white">3</span></button></p>
+          <p class="w3-clear"></p>
+
+          <!-- Example of comment field -->
+          <div id="demo3" style="display:none">
+            <hr>
+            <div class="w3-row w3-margin-bottom">
+              <div class="w3-col l2 m3">
+                <img src="/w3images/girl_mountain.jpg" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Jane <span class="w3-opacity w3-medium">April 10, 2015, 7:22 PM</span></h4>
+                <p>That was a great runway show! Thanks for everything.</p>
+              </div>
+            </div>
+            <div class="w3-row w3-margin-bottom">
+              <div class="w3-col l2 m3">
+                <img src="/w3images/boy.jpg" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>John <span class="w3-opacity w3-medium">April 8, 2015, 10:32 PM</span></h4>
+                <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+              </div>
+            </div>
+            <div class="w3-row w3-margin-bottom">
+              <div class="w3-col l2 m3">
+                <img src="/w3images/girl_hood.jpg" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Anja <span class="w3-opacity w3-medium">April 7, 2015, 9:12 PM</span></h4>
+                <p>Cant wait for the runway to start!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- END BLOG ENTRIES -->
+    </div>
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey" style="padding:32px">
+  <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+
+</footer>
+
+<script>
+// Toggle between hiding and showing blog replies/comments
+document.getElementById("myBtn").click();
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+function likeFunction(x) {
+  x.style.fontWeight = "bold";
+  x.innerHTML = "✓ Liked";
+}
+</script>
+
+</body>
+</html>
+{% endblock content %}

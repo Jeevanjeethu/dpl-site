@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<style>
+body,h1,h2,h3,h4,h5,h6,h7,h8,h9,h10 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+</style>
+<body>
+
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button">Close Menu</a>
+  <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button">Food</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+</nav>
+
+<!-- Top menu -->
+
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter">
+      <img src="https://drive.google.com/uc?id=1_SNjVE586xLGa0QPeFXLFHBiq1iVr0hR" alt="Pasta and Wine" style="width:100%">
+      <h3>AL-BLR2-SPA-09-190 Brigade Decarta</h3>
+
+
+    </div>
+
+
+    <div class="w3-quarter">
+      <img src="https://drive.google.com/uc?id=1tta7yqNNz9-JANDzZVvo46KNM4QxeFrh" alt="Steak" style="width:100%">
+
+      <h3>AL-BLR2-SPA-10-200 Phoenix</h3>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://drive.google.com/uc?id=1bGaSnhtxF9EBjiL-p8eEzn46E4h_t1Bq" alt="Cherries" style="width:100%">
+      <h3>AL-BLR2-SPA-10-211 Achievers</h3>
+
+    </div>
+    <div class="w3-quarter">
+      <img src="https://drive.google.com/uc?id=1zgKHWtZC2PekBS9w78jXM9HtWFA8Y-MH" alt="Sandwich" style="width:100%">
+      <h3>AL-BLR2-SPA-11-221 Roadies</h3>
+
+    </div>
+  </div>
+
+
+
+  <div class="results"></div>
+
+<script>
+
+ // ID of the Google Spreadsheet
+ var spreadsheetID = "SPREADSHEET KEY";
+
+ // Make sure it is public or set to Anyone with link can view
+ var url = "https://spreadsheets.google.com/feeds/list/" + "https://docs.google.com/spreadsheets/d/e/2PACX-1vR_TBcRmI3RT7O-ffXMtoe8vC5uf-25JCKTtr825h4uBK1vqCp8jC6Tq1WR53Z0kU-KFeopHYikWOKR/pubhtml?widget=true&amp;headers=false" + "/od6/public/values?alt=json";
+
+ $.getJSON(url, function(data) {
+
+  var entry = data.feed.entry;
+
+  $(entry).each(function(){
+    // Column names are name, age, etc.
+    $('.results').prepend('<h2>'+this.gsx$name.$t+'</h2><p>'+this.gsx$age.$t+'</p>');
+  });
+
+ });
+
+</script>
+
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="https://drive.google.com/uc?id=19Ws8eIW0dzyS4JeJArBGcUgDVeM-Vt-x" alt="Salmon" style="width:100%">
+      <h3>AL-BLR2-SPA-11-231 Cartographers</h3>
+
+
+    </div>
+    <div class="w3-quarter">
+      <img src="https://drive.google.com/uc?id=1RlBEcDdODn8moR3ToCvtvZY2z4p8pncE" alt="Salmon" style="width:100%">
+      <h3>AL-BLR2-SPA-13-241 Royal Emporers</h3>
+    </div>
+
+  </div>
+
+
+
+    </div> <br>
+
+  <!-- Pagination -->
+<div>
+  <br>
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="/blr2" class="w3-bar-item w3-button w3-hover-black">1</a>
+      <a href="/blr2pg2" class="w3-bar-item w3-button w3-hover-black">2</a>
+      <a href="/blr2pg3" class="w3-bar-item w3-button w3-hover-black">3</a>
+
+
+    </div>
+  </div>
+
+  <hr id="about">
+
+  </div>
+
+</body>
+</html>
+{% endblock content %}

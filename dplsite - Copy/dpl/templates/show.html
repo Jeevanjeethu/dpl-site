@@ -1,0 +1,434 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Schedule Template | CodyHouse</title>
+</head>
+<body>
+  <header class="cd-main-header text--center flex flex--column flex--center">
+    <p class="margin-top--md margin-bottom--xl">👈 <a class="cd-article-link" href="https://codyhouse.co/gem/schedule-template">Article &amp; Download</a></p>
+
+    <h1 class="text--xl">Schedule Template</h1>
+  </header>
+
+  <div class="cd-schedule cd-schedule--loading margin-top--lg margin-bottom--lg js-cd-schedule">
+    <div class="cd-schedule__timeline">
+      <ul>
+        <li><span>09:00</span></li>
+        <li><span>09:30</span></li>
+        <li><span>10:00</span></li>
+        <li><span>10:30</span></li>
+        <li><span>11:00</span></li>
+        <li><span>11:30</span></li>
+        <li><span>12:00</span></li>
+        <li><span>12:30</span></li>
+        <li><span>13:00</span></li>
+        <li><span>13:30</span></li>
+        <li><span>14:00</span></li>
+        <li><span>14:30</span></li>
+        <li><span>15:00</span></li>
+        <li><span>15:30</span></li>
+        <li><span>16:00</span></li>
+        <li><span>16:30</span></li>
+        <li><span>17:00</span></li>
+        <li><span>17:30</span></li>
+        <li><span>18:00</span></li>
+      </ul>
+    </div> <!-- .cd-schedule__timeline -->
+
+    <div class="cd-schedule__events">
+      <ul>
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Monday</span></div>
+
+          <ul>
+            <li class="cd-schedule__event">
+              <a data-start="09:30" data-end="10:30" data-content="event-abs-circuit" data-event="event-1" href="#0">
+                <em class="cd-schedule__name">Abs Circuit</em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="11:00" data-end="12:30" data-content="event-rowing-workout" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Rowing Workout</em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="14:00" data-end="15:15"  data-content="event-yoga-1" data-event="event-3" href="#0">
+                <em class="cd-schedule__name">Yoga Level 1</em>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Tuesday</span></div>
+
+          <ul>
+            <li class="cd-schedule__event">
+              <a data-start="10:00" data-end="11:00"  data-content="event-rowing-workout" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Rowing Workout</em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="11:30" data-end="13:00"  data-content="event-restorative-yoga" data-event="event-4" href="#0">
+                <em class="cd-schedule__name">Restorative Yoga</em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="13:30" data-end="15:00" data-content="event-abs-circuit" data-event="event-1" href="#0">
+                <em class="cd-schedule__name">Abs Circuit</em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="15:45" data-end="16:45"  data-content="event-yoga-1" data-event="event-3" href="#0">
+                <em class="cd-schedule__name">Yoga Level 1</em>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Wednesday</span></div>
+
+          <ul>
+            <li class="cd-schedule__event">
+              <a data-start="09:00" data-end="10:15" data-content="event-restorative-yoga" data-event="event-4" href="#0">
+                <em class="cd-schedule__name">Restorative Yoga</em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="10:45" data-end="11:45" data-content="event-yoga-1" data-event="event-3" href="#0">
+                <em class="cd-schedule__name">Yoga Level 1</em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="12:00" data-end="13:45"  data-content="event-rowing-workout" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Rowing Workout</em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="13:45" data-end="15:00" data-content="event-yoga-1" data-event="event-3" href="#0">
+                <em class="cd-schedule__name">Yoga Level 1</em>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Thursday</span></div>
+
+          <ul>
+            <li class="cd-schedule__event">
+              <a data-start="09:30" data-end="10:30" data-content="event-abs-circuit" data-event="event-1" href="#0">
+                <em class="cd-schedule__name">Abs Circuit</em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="12:00" data-end="13:45" data-content="event-restorative-yoga" data-event="event-4" href="#0">
+                <em class="cd-schedule__name">Restorative Yoga</em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="15:30" data-end="16:30" data-content="event-abs-circuit" data-event="event-1" href="#0">
+                <em class="cd-schedule__name">Abs Circuit</em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="17:00" data-end="18:30"  data-content="event-rowing-workout" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Rowing Workout</em>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="cd-schedule__group">
+          <div class="cd-schedule__top-info"><span>Friday</span></div>
+
+          <ul>
+            <li class="cd-schedule__event">
+              <a data-start="10:00" data-end="11:00"  data-content="event-rowing-workout" data-event="event-2" href="#0">
+                <em class="cd-schedule__name">Rowing Workout</em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="12:30" data-end="14:00" data-content="event-abs-circuit" data-event="event-1" href="#0">
+                <em class="cd-schedule__name">Abs Circuit</em>
+              </a>
+            </li>
+
+            <li class="cd-schedule__event">
+              <a data-start="15:45" data-end="16:45"  data-content="event-yoga-1" data-event="event-3" href="#0">
+                <em class="cd-schedule__name">Yoga Level 1</em>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="cd-schedule-modal">
+      <header class="cd-schedule-modal__header">
+        <div class="cd-schedule-modal__content">
+          <span class="cd-schedule-modal__date"></span>
+          <h3 class="cd-schedule-modal__name"></h3>
+        </div>
+
+        <div class="cd-schedule-modal__header-bg"></div>
+      </header>
+
+      <div class="cd-schedule-modal__body">
+        <div class="cd-schedule-modal__event-info"></div>
+        <div class="cd-schedule-modal__body-bg"></div>
+      </div>
+
+      <a href="#0" class="cd-schedule-modal__close text--replace">Close</a>
+    </div>
+
+    <div class="cd-schedule__cover-layer"></div>
+  </div> <!-- .cd-schedule -->
+
+  <script src="assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<html>
+
+<body>
+  <html>
+    <head>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
+        google.charts.load('current', {'packages':['sankey']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'From');
+          data.addColumn('string', 'To');
+          data.addColumn('number', 'Weight');
+          data.addRows([
+            [ 'A', 'X', 5 ],
+            [ 'A', 'Y', 5 ]
+
+
+
+          ]);
+
+          // Sets chart options.
+          var options = {
+            width: 600,
+          };
+
+          // Instantiates and draws our chart, passing in some options.
+          var chart = new google.visualization.Sankey(document.getElementById('sankey_basic'));
+          chart.draw(data, options);
+        }
+      </script>
+    </head>
+    <body>
+      <div id="sankey_basic" style="width: 900px; height: 300px;"></div>
+    </body>
+  </html>
+
+ <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<div id="sankey_multiple" style="width: 900px; height: 700px;"></div>
+
+
+<script type="text/javascript">
+  google.charts.load("current", {packages:["sankey"]});
+  google.charts.setOnLoadCallback(drawChart);
+   function drawChart() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'From');
+    data.addColumn('string', 'To');
+    data.addColumn('number', 'Day');
+    data.addRows([
+       [ 'ROYAL KARTE', 'Team2', 1 ],
+       [ 'ROYAL KARTE', 'TEAM HAWKS', 1 ],
+       [ 'ROYAL KARTE', 'COLTS', 1 ],
+       [ 'ROYAL KARTE', 'SON OF ANARCHY', 1 ],
+       [ 'TEAM SPARTANS(H)', 'DARKSIDE EMPERORS', 1 ],
+       [ 'TEAM SPARTANS(H)', 'TEAM HAWKS', 5 ],
+       [ 'TEAM SPARTANS(H)', 'SON OF ANARCHY', 1 ],
+       [ 'TEAM EKTA', 'DARKSIDE EMPERORS', 1 ],
+       [ 'TEAM EKTA', 'TEAM HAWKS', 1 ],
+       [ 'TEAM EKTA', 'COLTS', 5 ],
+       [ 'TEAM EKTA', 'SON OF ANARCHY', 1 ],
+       [ 'BRIGADE DECARTA', 'DARKSIDE EMPERORS', 1 ],
+       [ 'BRIGADE DECARTA', 'TEAM HAWKS', 1 ],
+       [ 'BRIGADE DECARTA', 'COLTS', 1 ],
+       [ 'BRIGADE DECARTA', 'SON OF ANARCHY', 5 ],
+       [ 'DARKSIDE EMPERORS', 'Angola', 2 ],
+       [ 'DARKSIDE EMPERORS', 'Senegal', 1 ],
+       [ 'DARKSIDE EMPERORS', 'Morocco', 1 ],
+       [ 'DARKSIDE EMPERORS', 'South Africa', 3 ],
+       [ 'TEAM HAWKS', 'Angola', 1 ],
+       [ 'TEAM HAWKS', 'Senegal', 3 ],
+       [ 'TEAM HAWKS', 'Mali', 3 ],
+       [ 'TEAM HAWKS', 'Morocco', 3 ],
+       [ 'TEAM HAWKS', 'South Africa', 1 ],
+       [ 'COLTS', 'Senegal', 1 ],
+       [ 'COLTS', 'Morocco', 3 ],
+       [ 'COLTS', 'South Africa', 1 ],
+       [ 'SON OF ANARCHY', 'Angola', 1 ],
+       [ 'SON OF ANARCHY', 'Senegal', 1 ],
+       [ 'SON OF ANARCHY', 'Morocco', 2 ],
+       [ 'SON OF ANARCHY', 'South Africa', 7 ],
+       [ 'South Africa', 'China', 5 ],
+       [ 'South Africa', 'India', 1 ],
+       [ 'South Africa', 'Japan', 3 ],
+       [ 'Angola', 'China', 5 ],
+       [ 'Angola', 'India', 1 ],
+       [ 'Angola', 'Japan', 3 ],
+       [ 'Senegal', 'China', 5 ],
+       [ 'Senegal', 'India', 1 ],
+       [ 'Senegal', 'Japan', 3 ],
+       [ 'Mali', 'China', 5 ],
+       [ 'Mali', 'India', 1 ],
+       [ 'Mali', 'Japan', 3 ],
+       [ 'Morocco', 'China', 5 ],
+       [ 'Morocco', 'India', 1 ],
+       [ 'Morocco', 'Japan', 3 ]
+    ]);
+
+    // Set chart options
+
+    var colors = ['#a6cee3', '#b2df8a', '#fb9a99', '#fdbf6f',
+                    '#cab2d6', '#ffff99', '#1f78b4', '#33a02c'];
+
+      var options = {
+        height: 400,
+        sankey: {
+          node: {
+            colors: colors
+          },
+          link: {
+            colorMode: 'gradient',
+            colors: colors
+          }
+        }
+      };
+
+    // Instantiate and draw our chart, passing in some options.
+    var chart = new google.visualization.Sankey(document.getElementById('sankey_multiple'));
+    chart.draw(data, options);
+   }
+
+</script>
+</body>
+</html>
+
+<br>
+<br>
+<br>
+<br>
+
+<br>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!-- Styles -->
+<style>
+#chartdiv {
+  width: 100%;
+  height: 500px
+}
+
+</style>
+
+<!-- Resources -->
+<script src="https://www.amcharts.com/lib/4/core.js"></script>
+<script src="https://www.amcharts.com/lib/4/charts.js"></script>
+<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+<!-- Chart code -->
+<script>
+am4core.ready(function() {
+
+// Themes begin
+am4core.useTheme(am4themes_animated);
+// Themes end
+
+var chart = am4core.create("chartdiv", am4charts.SankeyDiagram);
+chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+
+chart.data = [
+  { from: "A", to: "D", value: 10 },
+  { from: "B", to: "D", value: 8 },
+  { from: "B", to: "E", value: 4 },
+  { from: "C", to: "E", value: 3 },
+  { from: "D", to: "G", value: 5 },
+  { from: "D", to: "I", value: 2 },
+  { from: "D", to: "H", value: 3 },
+  { from: "E", to: "H", value: 6 },
+  { from: "G", to: "J", value: 5 },
+  { from: "I", to: "J", value: 1 },
+  { from: "H", to: "J", value: 9 }
+];
+
+let hoverState = chart.links.template.states.create("hover");
+hoverState.properties.fillOpacity = 0.6;
+
+chart.dataFields.fromName = "from";
+chart.dataFields.toName = "to";
+chart.dataFields.value = "value";
+
+// for right-most label to fit
+chart.paddingRight = 30;
+
+// make nodes draggable
+var nodeTemplate = chart.nodes.template;
+nodeTemplate.inert = true;
+nodeTemplate.readerTitle = "Drag me!";
+nodeTemplate.showSystemTooltip = true;
+nodeTemplate.width = 20;
+
+// make nodes draggable
+var nodeTemplate = chart.nodes.template;
+nodeTemplate.readerTitle = "Click to show/hide or drag to rearrange";
+nodeTemplate.showSystemTooltip = true;
+nodeTemplate.cursorOverStyle = am4core.MouseCursorStyle.pointer
+
+}); // end am4core.ready()
+</script>
+
+<!-- HTML -->
+<div id="chartdiv"></div>
+
+{% endblock content %}

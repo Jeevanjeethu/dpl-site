@@ -1,0 +1,253 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Image Header -->
+<br>
+<br>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="http://ipl2019livestream.com/wp-content/uploads/2018/09/2019-ipl-wallpapers-download.jpg" alt="boat" style="width:100%;min-height:350px;max-height:600px;*5Vo58EnOZ_PPaO0AoGpflQ.jpeg" alt="Image">
+        <div class="carousel-caption">
+
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="https://ipl2019-live.com/wp-content/uploads/2019/03/ipl-dream-11-csk-vs-rcb-2019-today-match-prediction.jpg" alt="boat" style="width:40%;min-height:350px;max-height:600px;*5Vo58EnOZ_PPaO0AoGpflQ.jpeg" alt="Image">
+        <div class="carousel-caption">
+
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="http://www.ipllivecricketscore.com/wp-content/uploads/2019/05/MI-vs_SRH.jpg" alt="boat" style="width:40%;min-height:350px;max-height:600px;*5Vo58EnOZ_PPaO0AoGpflQ.jpeg" alt="Image">
+        <div class="carousel-caption">
+
+        </div>
+      </div>
+    </div>
+
+
+<div class="w3-container w3-padding-64 w3-center" id="team">
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  </style>
+  </head>
+  <body>
+
+  <img src="https://drive.google.com/uc?id=0B_U_9FEyii9CSXlrSzBSRmZOVTJNVHo5SlpoQmNEU0VZd3FB" alt="Paris" style="width:10%;">
+
+  </body>
+  </html>
+  <button id="authorize_button" style="display: none;">Authorize</button>
+  <button id="signout_button" style="display: none; border: 0"></button>
+
+  <!-- <pre id="content" style="white-space: pre-wrap;"></pre> -->
+
+  <script type="text/javascript">
+    // Client ID and API key from the Developer Console
+    var CLIENT_ID = '857508707063-9g35sg8t4en2uahbq8rjb8bai1a6aos1.apps.googleusercontent.com';
+    var API_KEY = 'AIzaSyC9Lit8ChI-OtK2txYiTStI9QOKPEzN7ik';
+
+    // Array of API discovery doc URLs for APIs used by the quickstart
+    var DISCOVERY_DOCS = ["https://sheets.googleapis.com/$discovery/rest?version=v4"];
+
+    // Authorization scopes required by the API; multiple scopes can be
+    // included, separated by spaces.
+    var SCOPES = "https://www.googleapis.com/auth/spreadsheets.readonly";
+
+    var authorizeButton = document.getElementById('authorize_button');
+    var signoutButton = document.getElementById('signout_button');
+
+    /**
+     *  On load, called to load the auth2 library and API client library.
+     */
+    function handleClientLoad() {
+      gapi.load('client:auth2', initClient);
+    }
+
+    /**
+     *  Initializes the API client library and sets up sign-in state
+     *  listeners.
+     */
+    function initClient() {
+      gapi.client.init({
+        apiKey: API_KEY,
+        clientId: CLIENT_ID,
+        discoveryDocs: DISCOVERY_DOCS,
+        scope: SCOPES
+      }).then(function () {
+        // Listen for sign-in state changes.
+        gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
+
+        // Handle the initial sign-in state.
+        updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+        authorizeButton.onclick = handleAuthClick;
+        signoutButton.onclick = handleSignoutClick;
+      }, function(error) {
+        appendPre(JSON.stringify(error, null, 2));
+      });
+    }
+
+    /**
+     *  Called when the signed in status changes, to update the UI
+     *  appropriately. After a sign-in, the API is called.
+     */
+    function updateSigninStatus(isSignedIn) {
+      if (isSignedIn) {
+        authorizeButton.style.display = 'none';
+        signoutButton.style.display = 'block';
+        listMajors();
+      } else {
+        authorizeButton.style.display = 'block';
+        signoutButton.style.display = 'none';
+      }
+    }
+
+    /**
+     *  Sign in the user upon button click.
+     */
+    function handleAuthClick(event) {
+      gapi.auth2.getAuthInstance().signIn();
+    }
+
+    /**
+     *  Sign out the user upon button click.
+     */
+    function handleSignoutClick(event) {
+      gapi.auth2.getAuthInstance().signOut();
+    }
+
+    /**
+     * Append a pre element to the body containing the given message
+     * as its text node. Used to display the results of the API call.
+     *
+     * @param {string} message Text to be placed in pre element.
+     */
+    function appendPre(message) {
+      var pre = document.getElementById('content');
+      var textContent = document.createTextNode(message + '\n');
+      pre.appendChild(textContent);
+    }
+
+    /**
+     * Print the names and majors of students in a sample spreadsheet:
+     * https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
+     */
+
+    function listMajors() {
+      gapi.client.sheets.spreadsheets.values.get({
+        spreadsheetId: '1CBj-1n3qPaTuzX9x637W-7wQkO8iY5LqnDXFzszfmCc',
+        range: 'Awards!A:D',
+      }).then(function(response) {
+        var range = response.result;
+        if (range.values.length > 0) {
+          // appendPre('POINTS TABLE');
+          console.log(range.values);
+          // $("#orangeCap").attr("src", range.values[0]);
+          // $("#purpleCap").attr("src", range.values[1]);
+          // $("#manOfTheMatch").attr("src", range.values[2]);
+          // $("#manOfTheSeries").attr("src", range.values[3]);
+          for (i = 0; i < range.values.length; i++) {
+            var row = range.values[i];
+            // $("#pointTable tbody").append("<tr><td>"+row[0]+"</td><td>"+row[1]+"<t/d><td>"+row[2]+"</td></tr>");
+            // Print columns A and E, which correspond to indices 0 and 4.
+            // appendPre(row[0] +'  V/S  '+ row[1]+'       ' + row[2]);
+
+            // $("#purpleCap").attr("src", row[0]);
+          }
+        } else {
+          appendPre('No data found.');
+        }
+      }, function(response) {
+        appendPre('Error: ' + response.result.error.message);
+      });
+    }
+
+  </script>
+
+  <script async defer src="https://apis.google.com/js/api.js"
+    onload="this.onload=function(){};handleClientLoad()"
+    onreadystatechange="if (this.readyState === 'complete') this.onload()">
+  </script>
+
+
+
+<h2>OUR TEAM</h2>
+<p>Meet the team - our office rats:</p>
+
+<div class="w3-row"><br>
+
+<div class="w3-quarter">
+  <img id="orangeCap" src="https://www.kreedon.com/wp-content/uploads/2019/03/Orange-Cap.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Orange Cap</h3>
+  <p>Team Id</p>
+</div>
+
+<div  class="w3-quarter">
+  <img id="purpleCap" src="https://statics.sportskeeda.com/editor/2019/02/0bfd0-15512411575203-800.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Purple Cap</h3>
+  <p>Team Id</p>
+</div>
+
+<div  class="w3-quarter">
+  <img id="manOfTheMatch" src="http://www.ipl-fixtures.com/wp-content/uploads/2017/12/Orange-cap-holder-2018.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Man of the Match</h3>
+  <p>Team Id</p>
+</div>
+
+<div  class="w3-quarter">
+  <img id="manOfTheSeries" src="https://im.indiatimes.in/content/2018/Apr/virat_kohli_has_played_in_all_editions_for_rcb_1523091002_725x725.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Man of the series</h3>
+  <p>Team Id</p>
+</div>
+
+</div>
+</div>
+<!-- Modal -->
+<div id="id01" class="w3-modal">
+ <div class="w3-modal-content w3-card-4 w3-animate-top">
+   <header class="w3-container w3-teal w3-display-container">
+     <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-teal w3-display-topright"><i class="fa fa-remove"></i></span>
+
+     <h5> <i class="fa fa-smile-o"></i></h5>
+   </header>
+
+   <div class="w3-container">
+
+
+
+
+     <p>Go to our <a class="w3-text-teal" href="/w3css/default.asp">DPL - Dolores Premeire Leagu</a> to learn more!</p>
+   </div>
+
+
+
+
+   <footer class="w3-container w3-teal">
+     <p>Modal footer</p>
+   </footer>
+ </div>
+</div>
+
+
+
+
+{% endblock content %}
